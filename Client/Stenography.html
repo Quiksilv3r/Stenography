@@ -1,0 +1,52 @@
+<template name="Stenography">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="span18">
+                <div class="Header">
+                    Want to Learn How to Type Faster? {{ > Menu}}
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <div class="QwertyFrame"> QWERTY</div>
+                        
+                    </div>
+                    <div class="span12">
+                        <div class="StenoFrame"> STENO</div>
+                      
+                    </div>
+                    {{> VirtualKeyboard}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="Menu">
+    <div class="menueBar">
+        <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="enabled"><a href="http://localhost:3000/">Home</a></li>
+            <li role="presentation" class="enabled"> <a href="http://localhost:3000/References">References</a></li>
+            <li role="presentation" class="enabled"> <a href="http://localhost:3000/Examples">Examples</a></li>
+            <li role="presentation" class="enabled"> <a href="http://localhost:3000/Credits">Credits</a></li>
+        </ul>
+    </div>
+</template>
+<template name="QuertyBox">
+    <div class="QuertyEntryField">
+        <div class="QWERTY">
+            <label for="ex2">QWERTY</label>
+            <input class="input" id="ex2" type="text">
+        </div>
+        <div class="STENO">
+            <label for="ex2">STENO</label>
+            <input class="input" id="ex3" type="text">
+        </div>
+    </div>
+</template>
+<template name="VirtualKeyboard">
+    <div class="row">
+        <div class="span18">
+            <div class="OnScreenKeyboard"> HELLO </div>
+        </div>
+    </div>
+</template>
+<!-- <template > -->
