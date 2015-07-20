@@ -1,7 +1,8 @@
-// if (Meteor.isClient) {
+ if (Meteor.isClient) {
+    
+      dick = new Mongo.Collection("bob");     
 
-
-// }
+ }
 
 
 
