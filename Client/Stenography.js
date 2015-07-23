@@ -1,9 +1,21 @@
+
+ Dictionary = new Mongo.Collection("dictionary");     
+ 
  if (Meteor.isClient) {
-    
-      dick = new Mongo.Collection("bob");     
-
- }
-
+    Template.QwertyBox.events({
+    	'keypress #qEntry': function (evt, ui) {	
+     	 	if(event.keyCode == 13) {
+     	 		var qwertyInput = evt.currentTarget.value;
+        		var word = Dictionary.findOne({qwerty:qwertyInput});
+        		if(word != undefined){
+        			$("#sEntry").val(word.steno);	
+        		}else{
+        			alert("Invalid Entry, Try again");
+        		} 
+     	    }
+    	 }
+	});
+}
 
 
 

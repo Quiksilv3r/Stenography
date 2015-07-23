@@ -3,18 +3,13 @@
         <div class="row">
             <div class="span18">
                 <div class="Header">
-                    Want to Learn How to Type Faster? {{ > Menu}}
+                    {{ > Menu}}
                 </div>
-                <div class="row">
-                    <div class="span12">
-                        <div class="QwertyFrame"> QWERTY</div>
-                        
-                    </div>
-                    <div class="span12">
-                        <div class="StenoFrame"> STENO</div>
-                      
-                    </div>
-                    {{> VirtualKeyboard}}
+                <div class="span8">
+                    {{ > QwertyBox}}
+                </div>
+                <div class="span16">
+                    {{ > StenoBox}}
                 </div>
             </div>
         </div>
@@ -30,16 +25,18 @@
         </ul>
     </div>
 </template>
-<template name="QuertyBox">
-    <div class="QuertyEntryField">
+<template name="QwertyBox">
+    <div class="QwertyEntryField">
         <div class="QWERTY">
             <label for="ex2">QWERTY</label>
-            <input class="input" id="ex2" type="text">
+            <input class="input" id="qEntry" type="text">
         </div>
-        <div class="STENO">
-            <label for="ex2">STENO</label>
-            <input class="input" id="ex3" type="text">
-        </div>
+    </div>
+</template>
+<template name="StenoBox">
+    <div class="STENO">
+        <label for="ex2">STENO</label>
+        <input class="input" id="sEntry" type="text">
     </div>
 </template>
 <template name="VirtualKeyboard">
